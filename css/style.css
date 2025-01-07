@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@300;500;600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+/* Setingan untuk warna */
+:root{
+    --warna-1:#8b4513;
+    --warna-2:#CD853F;
+    --warna-3:#C68E17;
+    --warna-4:#deb887;
+    --warna-5:#737f9e;
+    --warna-6:#ffffff;
+    --background:#f0f0ff;
+    --shadow-1:0 3px 6px 0 rgba(50,50,50,.3);
+}
+
+/* style untuk keseluruhan */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* style untuk tag html*/
+body{
+    background-color: var(--background);
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    height: 2000px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 6rem 8% 1.2rem;
+}
+
+/* Style untuk navigasi */
+.navigasi{
+    display: flex;
+    padding: 1.4rem 8%;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    position: fixed;
+    z-index: 9999;
+    background-color: var(--warna-6);
+    box-shadow: var(--shadow-1);
+}
+
+.navigasi .logo-navigasi{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 800;
+    color: var(--warna-1);
+}
+
+.navigasi .navigasi-menu a{
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    display: inline-block;
+}
+
+.navigasi .navigasi-menu a:hover{
+    color: var(--warna-2);
+}
+
+.navigasi .navigasi-menu a::after{
+    content: '';
+    display: block;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--warna-2);
+    transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transition: .2s linear;
+}
+
+.navigasi .navigasi-menu a:hover::after{
+    transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+
+.navigasi .navigasi-icon i{
+    margin: 0 .2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000000;
+    display: inline-block;
+}
+
+/* menyembunyikan hamburger menu pada tampilan desktop */
+#menu{
+    display: none;
+}
+/* Style untuk navigasi selesai */
+
+/* Style untuk beranda */
+.beranda{
+    background-image: url(../bg/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 120px;
+    margin-left: 8%;
+    margin-right: 8%;
+    min-height: 75vh;
+    scroll-margin-top: 120px;
+}
+
+.beranda{
+    padding: 6rem 8% 1.4rem;
+}
+
+.beranda h1{
+    font-size: 2.9rem;
+    max-width: 35rem;
+    color: var(--warna-2);
+    line-height: 1.3;
+    margin-top: 20px;
+}
+
+.beranda p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--warna-6);
+    margin-bottom: 14px;
+}
+
+.beranda .btn-beranda{
+    display: inline-block;
+    padding: .5rem 2rem;
+    background-color: var(--warna-1);
+    font-weight: 500;
+    color: var(--warna-6);
+    border-radius: 8px;
+    box-shadow: var(--shadow-1);
+    transition: 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.beranda .btn-beranda:hover{
+    animation: shake 0.5s infinite;
+    -webkit-animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+/* Style untuk beranda selesai */
+
+/* Style untuk fasilitas */
+.fasilitas h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #8b4513;
+}
+
+.fasilitas p{
+    font-size:1rem;
+    text-align: center;
+}
+
+.fasilitas .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    gap: 25px;
+}
+
+.fasilitas .fasilitas-item{
+    padding: 1rem .5rem;
+    text-align: center;
+    background-color: var(--warna-4);
+    border-radius: 8px;
+    transition: 0.4s ease-out;
+}
+
+.fasilitas .fasilitas-item:hover{
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+}
+
+.fasilitas .fasilitas-item img{
+    width: 100px;
+    height: auto;
+}
+
+.fasilitas .fasilitas-item p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color:var(--warna-1);
+}
+/* Style untuk fasilitas selesai */
+
+/* Style untuk tentang kami */
+.tentang-kami h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    top: 100%;
+    left: 0%;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--warna-1);
+}
+
+.tentang-kami p{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0%;
+    left: 0%;
+}
+
+
+
+.tentang-kami .row .content .button .btn-video, .btn-tentang-kami {
+    padding: .5rem 1.4rem;
+    background-color:var(--warna-1);
+    margin: 0 10px;
+    border-radius: 10px;
+    color: var(--warna-6);
+    box-shadow: var(--shadow-1);
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+    pointer-events: auto;
+}
+
+/* Style untuk tentang kami selesai */
+
+
+.btn-tentang-kami {
+    position:absolute;
+    display: flex;
+    border-radius: 8px;
+    display: inline-block;
+    padding: .4rem 1rem;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    margin: 2%;
+}
+
+.btn-tentang-kami:hover {
+    animation: shake 0.5s infinite;
+    -webkit-animation: shake 0.5s infinite;
+}
+
+
+.daftar-menu .info p{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 11px;
+    animation: bling 1s steps(5, start) infinite;
+    -webkit-animation: bling 1s steps(5, start) infinite;
+}
+
+.daftar-menu .info span{
+    color: #ff0000;
+}
+
+@keyframes bling {
+    to { visibility: hidden; }
+}
+/* Style untuk daftar menu selesai */
+
+/* Style untuk Foto Dokumentasi */
+.dokumentasi h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--warna-1);
+}
+
+.dokumentasi p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.dokumentasi .container{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dokumentasi .container img{
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.4s;
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: scale(0.9) rotate(-10deg);
+        -ms-transform: scale(0.9) rotate(-10deg);
+        -webkit-transform: scale(0.9) rotate(-10deg);
+    }
+}
+
+.dokumentasi .container .foto-item img{
+    width: 250px;
+    height: 180px;
+}
+
+.dokumentasi .container .foto-item .pop-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.dokumentasi .container .foto-item .pop-up > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+}
+
+.dokumentasi .container .foto-item .pop-up p{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--warna-6);
+    font-size: 1.1rem;
+    text-align: center;
+    display: none;
+}
+
+.dokumentasi .container .foto-item input[type="checkbox"]:checked ~ .pop-up {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dokumentasi .container .foto-item input[type="checkbox"]:checked ~ .pop-up p{
+    display: block;
+    margin-top: 10px;
+}
+
+.dokumentasi .container .foto-item .pop-up .close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #ff0000;
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dokumentasi .btn-gallery{
+    background-color: var(--warna-1);
+    padding: .5rem 1.4rem;
+    border-radius: 8px;
+    margin-top: -10px;
+    color: var(--warna-6);
+    box-shadow: var(--shadow-1);
+    font-size: 1.1rem;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+        -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+    }
+}
+/* Style untuk foto selesai */
+
+/* Style untuk lokasi */
+.lokasi h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color:var(--warna-1);
+}
+
+.lokasi p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.lokasi .map{
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.lokasi .map iframe{
+    margin-top: 12px;
+    margin: auto;
+    border-radius: 10px;
+}
+/* Style untuk lokasi selesai */
+
+/* Style untuk footer */
+.footer{
+    display: flex;
+    padding: 1.4rem 8%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: var(--warna-6);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: static;
+}
+
+.footer .cp{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--warna-5);
+}
+
+.footer .cp .bx-copyright{
+    font-size: .8rem;
+}
+
+.footer .footer-media{
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-media a{
+    margin: 0 8px;
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.footer .footer-media .bx{
+    background-color:var(--background);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+/* Style untuk footer selesai */
+/* Selesai & Terima kasih; */
+
+@media (max-width : 450px){
+    html{
+        font-size: 70%;
+    }
+
+    .navigasi .navigasi-menu{
+        position: absolute;
+        top: 110%;
+        right: -100%;
+        background-color: var(--warna-2);
+        width: 15rem;
+        height: 28vh;
+        border-radius: 10px;
+    }
+
+    /* menampilkan hamburger menu saat berada pada perangkat mobile */
+    #menu{
+        display: inline-block;
+    }
+
+    .navigasi .navigasi-menu.active{
+        right: 8%;
+        transition: o.4s linear;
+    }
+
+    .navigasi .navigasi-menu a{
+        display: block;
+        margin: 1.1rem;
+        color: #000000;
+        text-align: center;
+    }
+
+    .navigasi .navigasi-menu a:hover{
+        color: var(--warna-6);
+    }
+
+    .navigasi .navigasi-icon i{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        line-height: 25px;
+        transition: .3s all;
+    }
+
+    .navigasi .navigasi-icon i:hover{
+        background-color: var(--warna-2);
+        color: var(--warna-6);
+        width: 25px;
+        height: 25px;
+        border-radius: 6px;
+    }
+
+    .beranda {
+        text-align: center;
+        min-height: 350px;
+    }
+
+    .fasilitas h1, .tentang-kami h1, .daftar-menu h1, .dokumentasi h1, .lokasi h1{
+        margin-top: 25px;
+    }
+
+    .fasilitas .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 25px;
+    }
+
+    .tentang-kami .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tentang-kami .row .content{
+        margin-top: -25rem;
+        width: 390px;
+        flex: 1 1 50rem;
+    }
+
+    .daftar-menu{
+        margin-top: -30rem;
+    }
+
+    .daftar-menu .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .daftar-menu .container .menu-item{
+        width: 100%;
+    }
+
+
+    .dokumentasi .container .foto-item img{
+        width: 330px;
+        height: 200px;
+    }
+
+    .dokumentasi .container .foto-item .pop-up{
+        max-height: 100%;
+    }
+
+    .dokumentasi .container .foto-item .pop-up > img{
+        width: 90%;
+        height: 50%;
+    }
+
+    .dokumentasi .container .foto-item .pop-up p{
+        top: 80%;
+    }
+
+    .lokasi .map iframe{
+        width: 360px;
+        height: 220px;
+        text-align: center;
+    }
+}
+
+.food-carousel {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel-inner {
+    display: flex;
+    animation: scroll-infinite 70s linear infinite;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    margin: 5px;
+    text-align: center;
+    min-width: 150px;
+}
+
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    color: #8b4513;
+    text-align: center;
+    padding: 1rem 0;
+}
+.quote {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: 4px solid #ff6347;
+    background: #fff4f2;
+}
+.quote p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+.quote span {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6347;
+}
+footer {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #777;
+}
